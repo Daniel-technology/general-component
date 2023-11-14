@@ -128,11 +128,6 @@
             </dependency>
 
 
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus</artifactId>
-                <version>3.5.3</version>
-            </dependency>
 
             <dependency>
                 <groupId>com.anji-plus</groupId>
