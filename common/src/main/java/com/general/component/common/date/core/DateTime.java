@@ -3,6 +3,7 @@ package com.general.component.common.date.core;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 日期核型
@@ -77,4 +78,19 @@ public class DateTime extends Date {
     }
 
 
+    /**
+     * 获取日期之间的差距
+     *
+     * @param startDate 开始
+     * @param endDate   结束
+     * @param type      日期类型 Calendar.DATE
+     * @param format    日期格式
+     * @return 数组
+     */
+    public List<String> getTimeBetweenTime(String startDate,
+                                           String endDate,
+                                           int type,
+                                           String format) {
+        return new FastDateFormat(format).getTimeBetweenTime(startDate, endDate, type);
+    }
 }
