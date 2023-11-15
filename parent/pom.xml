@@ -17,7 +17,9 @@
     <modules>
 <!--        <module>../log</module>-->
         <module>../common</module>
-<!--        <module>../web</module>-->
+        <module>../log</module>
+        <module>../mvc</module>
+        <!--        <module>../web</module>-->
 <!--        <module>../wechat</module>-->
 <!--        <module>../file</module>-->
 <!--        <module>../cache</module>-->
@@ -35,33 +37,29 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.general.component</groupId>
+                <artifactId>common</artifactId>
+                <version>${general.component.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.general.component</groupId>
+                <artifactId>mvc-core</artifactId>
+                <scope>compile</scope>
+                <version>${general.component.version}</version>
+            </dependency>
+
+
+
+            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring.cloud-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>com.general.component</groupId>
-                <artifactId>common</artifactId>
-                <version>${general.component.version}</version>
-            </dependency>
 
-            <dependency>
-                <groupId>com.general.component</groupId>
-                <artifactId>log</artifactId>
-                <version>${general.component.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.general.component</groupId>
-                <artifactId>cache</artifactId>
-                <version>0.1.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.general.component</groupId>
-                <artifactId>file</artifactId>
-                <version>0.1.0-SNAPSHOT</version>
-            </dependency>
+
+
             <dependency>
                 <groupId>org.lionsoul</groupId>
                 <artifactId>ip2region</artifactId>
