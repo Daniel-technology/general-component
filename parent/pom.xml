@@ -52,11 +52,11 @@
                 <artifactId>log-core</artifactId>
                 <version>${general.component.version}</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>com.general.component</groupId>-->
-<!--                <artifactId>log-starter</artifactId>-->
-<!--                <version>${general.component.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.general.component</groupId>
+                <artifactId>log-starter</artifactId>
+                <version>${general.component.version}</version>
+            </dependency>
 
 
             <dependency>
