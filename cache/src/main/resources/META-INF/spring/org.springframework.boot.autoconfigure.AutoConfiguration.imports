@@ -1,2 +1,0 @@
-com.general.component.cache.redis.config.RedisProperty
-com.general.component.cache.redis.core.RedisService

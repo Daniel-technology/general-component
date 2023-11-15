@@ -1,5 +1,6 @@
 package com.general.component.common.license.core.verify;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.general.component.common.jackson.JacksonSupport;
 import com.general.component.common.license.constant.LicenseConstant;
 import com.general.component.common.license.core.LicenseExtra;
@@ -13,6 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.Objects;
 import java.util.prefs.Preferences;
 
 /**
@@ -46,7 +48,6 @@ public class ClientLicenseManager extends LicenseManager {
     /**
      * @param licenseContent the license content
      *                       - may <em>not</em> be {@code null}.
-     * @throws LicenseContentException
      */
     @Override
     protected synchronized void validate(LicenseContent licenseContent) throws LicenseContentException {
@@ -71,7 +72,12 @@ public class ClientLicenseManager extends LicenseManager {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            LicenseExtra licenseExtra = JacksonSupport.strToObj(strExtra, LicenseExtra.class);
+            LicenseExtra licenseExtra = null;
+            try {
+                licenseExtra = JacksonSupport.strToObj(strExtra, LicenseExtra.class);
+            } catch (JsonProcessingException e) {
+                throw new RuntimeException(e);
+            }
             //判断授权码是否正确
             if (StringUtils.isBlank(licenseExtra.getMachineCode())) {
                 throw new LicenseContentException(LicenseMessage.EXC_LICENSE_NOMACHINECODE);
@@ -114,7 +120,7 @@ public class ClientLicenseManager extends LicenseManager {
             licenseVerify.setStorePass(AESUtil.decrypt(LicenseConstant.LICENSE_PUBLICSTOREPASS, LicenseConstant.AES_KEY));
         }
         licenseVerify.setLicensePath(LicenseConstant.LICENSE_LICENSEPATH);
-        String path = "/" + this.getClass().getResource("/").getPath().substring(1) + LicenseConstant.LICENSE_PUBLICCERTSSTOREPATH;
+        String path = "/" + Objects.requireNonNull(this.getClass().getResource("/")).getPath().substring(1) + LicenseConstant.LICENSE_PUBLICCERTSSTOREPATH;
         licenseVerify.setPublicCertsStorePath(path);
         return licenseVerify;
     }
