@@ -1,0 +1,3 @@
+cn.teleinfo.summer.starter.mvc.log.HttpRequestLogAutoConfiguration
+cn.teleinfo.summer.starter.mvc.log.OplogCallbackAutoConfiguration
+cn.teleinfo.summer.starter.mvc.context.WebContextAutoConfiguration
