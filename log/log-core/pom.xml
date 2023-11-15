@@ -60,9 +60,5 @@
             <groupId>com.general.component</groupId>
             <artifactId>common</artifactId>
         </dependency>
-        <!--        <dependency>-->
-<!--            <groupId>cn.teleinfo.summer</groupId>-->
-<!--            <artifactId>summer-mvc</artifactId>-->
-<!--        </dependency>-->
     </dependencies>
 </project>
