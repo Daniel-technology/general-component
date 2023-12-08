@@ -58,7 +58,11 @@
                 <artifactId>log-starter</artifactId>
                 <version>${general.component.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.general.component</groupId>
+                <artifactId>user-core</artifactId>
+                <version>${general.component.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
