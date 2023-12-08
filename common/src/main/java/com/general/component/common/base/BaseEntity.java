@@ -10,13 +10,10 @@ import java.util.Date;
  * @author: littlesnail
  * @create: 2023−03-06 10:00 PM
  */
-public class BaseEntity implements Serializable {
+public class BaseEntity extends BaseTenantEntity  {
 
 
-    /**
-     * 租户id
-     */
-    private Integer tenantId;
+
 
     /**
      * 创建时间
@@ -77,13 +74,7 @@ public class BaseEntity implements Serializable {
         this.updatedBy = updatedBy;
     }
 
-    public Integer getTenantId() {
-        return tenantId;
-    }
 
-    public void setTenantId(Integer tenantId) {
-        this.tenantId = tenantId;
-    }
 
     public Integer getDelete() {
         return delete;

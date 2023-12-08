@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.6.3",
   "createdTime": "2023-12-8 15:42:56",
-  "updatedTime": "2023-12-8 16:07:18",
+  "updatedTime": "2023-12-8 16:40:27",
   "dbConns": [],
   "profile": {
     "default": {
@@ -1018,6 +1018,209 @@
           "id": "CE5C7D86-A737-48F6-9EBB-36BA41A933B5"
         }
       ]
+    },
+    {
+      "id": "C6649A32-0DA2-469C-AE39-F51B2DCE9EFE",
+      "env": {
+        "base": {
+          "nameSpace": "",
+          "codeRoot": ""
+        }
+      },
+      "defKey": "t_role",
+      "defName": "角色",
+      "comment": "",
+      "properties": {
+        "partitioned by": "(date string)",
+        "row format delimited": "",
+        "fields terminated by ','": "",
+        "collection items terminated by '-'": "",
+        "map keys terminated by ':'": "",
+        "store as textfile;": ""
+      },
+      "nameTemplate": "{defKey}[{defName}]",
+      "notes": {},
+      "headers": [
+        {
+          "refKey": "hideInGraph",
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defKey",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "defName",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "primaryKey",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "notNull",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "autoIncrement",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "domain",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "type",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "len",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "scale",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "comment",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "refDict",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "defaultValue",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "isStandard",
+          "freeze": false,
+          "hideInGraph": false
+        },
+        {
+          "refKey": "uiHint",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "extProps",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "attr1",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "attr2",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "attr3",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "attr4",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "attr5",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "attr6",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "attr7",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "attr8",
+          "freeze": false,
+          "hideInGraph": true
+        },
+        {
+          "refKey": "attr9",
+          "freeze": false,
+          "hideInGraph": true
+        }
+      ],
+      "fields": [
+        {
+          "defKey": "id",
+          "defName": "",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "58964B46-2DF7-4B6E-AE60-0A740D489F53",
+          "id": "D76E0853-D6C2-4A29-851E-669F60258A3A"
+        },
+        {
+          "defKey": "tenant_id",
+          "defName": "租户号",
+          "comment": "",
+          "type": "INT",
+          "len": 8,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": true,
+          "domain": "",
+          "refDict": "",
+          "uiHint": "",
+          "id": "9DACAD8E-E30F-4F85-8B58-FFD4A7ACD2D1"
+        },
+        {
+          "defKey": "name",
+          "defName": "名称",
+          "comment": "",
+          "type": "VARCHAR",
+          "len": 32,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "E1923111-DBBD-4472-8D04-B176BB30A879"
+        }
+      ],
+      "correlations": [],
+      "indexes": []
     }
   ],
   "views": [],
@@ -1027,7 +1230,8 @@
       "defKey": "user",
       "defName": "用户",
       "refEntities": [
-        "6CDE5193-12BC-4F6F-950A-B7A447354996"
+        "6CDE5193-12BC-4F6F-950A-B7A447354996",
+        "C6649A32-0DA2-469C-AE39-F51B2DCE9EFE"
       ],
       "refViews": [],
       "refDiagrams": [],
