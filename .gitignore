@@ -49,3 +49,4 @@ Thumbs.db
 /.settings/
 /.classpath
 #/.gitignore
+.back_general-component/

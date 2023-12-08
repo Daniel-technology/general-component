@@ -19,6 +19,7 @@
         <module>../common</module>
         <module>../log</module>
         <module>../mvc</module>
+        <module>../user</module>
         <!--        <module>../web</module>-->
         <!--        <module>../wechat</module>-->
         <!--        <module>../file</module>-->
