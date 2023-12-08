@@ -4,7 +4,7 @@
   "avatar": "",
   "version": "4.6.3",
   "createdTime": "2023-12-8 15:42:56",
-  "updatedTime": "2023-12-8 15:59:21",
+  "updatedTime": "2023-12-8 16:07:18",
   "dbConns": [],
   "profile": {
     "default": {
@@ -846,6 +846,23 @@
           "refDict": "",
           "uiHint": "",
           "id": "BA2BB67A-295C-46CC-B116-6CD63E44790D"
+        },
+        {
+          "defKey": "delete",
+          "defName": "逻辑删除",
+          "comment": "1-有效 0-无效",
+          "type": "INT",
+          "len": 1,
+          "scale": "",
+          "primaryKey": false,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "",
+          "id": "5C756335-9DC3-4162-BE16-60D6E7CE95E1"
         },
         {
           "defKey": "account",

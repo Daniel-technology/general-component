@@ -1,5 +1,7 @@
 package com.general.component.common.base;
 
+import com.general.component.common.enums.DataDeleteEnum;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,6 +12,11 @@ import java.util.Date;
  */
 public class BaseEntity implements Serializable {
 
+
+    /**
+     * 租户id
+     */
+    private Integer tenantId;
 
     /**
      * 创建时间
@@ -32,11 +39,10 @@ public class BaseEntity implements Serializable {
     private Long updatedBy;
 
     /**
-     * 逻辑删除:  0 已删除 1 未删除
+     * 逻辑删除;1-有效 0-无效
+     * @see DataDeleteEnum
      */
-    private Integer isDeleted = 1;
-
-
+    private Integer delete = 1;
 
 
     public Long getCreatedBy() {
@@ -71,11 +77,19 @@ public class BaseEntity implements Serializable {
         this.updatedBy = updatedBy;
     }
 
-    public Integer getIsDeleted() {
-        return isDeleted;
+    public Integer getTenantId() {
+        return tenantId;
     }
 
-    public void setIsDeleted(Integer isDeleted) {
-        this.isDeleted = isDeleted;
+    public void setTenantId(Integer tenantId) {
+        this.tenantId = tenantId;
+    }
+
+    public Integer getDelete() {
+        return delete;
+    }
+
+    public void setDelete(Integer delete) {
+        this.delete = delete;
     }
 }

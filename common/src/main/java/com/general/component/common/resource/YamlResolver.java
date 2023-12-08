@@ -1,7 +1,7 @@
 //package com.general.component.common.resource;
 //
 //import com.general.component.common.jackson.JacksonSupport;
-//import com.general.component.common.resource.model.ResourceInfo;
+//import com.general.component.common.resource.BaseModel.ResourceInfo;
 //import org.yaml.snakeyaml.DumperOptions;
 //import org.yaml.snakeyaml.Yaml;
 //

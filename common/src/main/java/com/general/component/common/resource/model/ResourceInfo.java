@@ -1,4 +1,4 @@
-//package com.general.component.common.resource.model;
+//package com.general.component.common.resource.BaseModel;
 //
 //import java.io.Serializable;
 //

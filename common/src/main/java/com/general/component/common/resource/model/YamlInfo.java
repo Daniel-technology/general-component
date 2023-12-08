@@ -1,4 +1,4 @@
-//package com.general.component.common.resource.model;
+//package com.general.component.common.resource.BaseModel;
 //
 ///**
 // * @description: yaml信息
